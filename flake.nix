@@ -54,7 +54,8 @@
           installPhase = ''
             runHook preInstall
 
-            cp ${name} $out
+            mkdir -p $out/bin
+            cp ${name} $out/bin
 
             runHook postInstall
           '';
